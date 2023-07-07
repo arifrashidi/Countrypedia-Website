@@ -1,125 +1,141 @@
-
-
 /*🔸 general */
 
 html {
-font-size: 62.5%;
-box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-height: 200vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-background: linear-gradient(to top left, #28b487, #7dd56f);
-font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #99a0ff;
+  background-image: radial-gradient(
+      at 53% 98%,
+      hsla(169, 65%, 69%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 26% 62%, hsla(286, 63%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 44% 17%, hsla(220, 79%, 65%, 1) 0px, transparent 50%),
+    radial-gradient(at 78% 34%, hsla(159, 86%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 41% 53%, hsla(88, 69%, 66%, 1) 0px, transparent 50%),
+    radial-gradient(at 84% 53%, hsla(128, 73%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 63%, hsla(168, 69%, 67%, 1) 0px, transparent 50%);
 }
 
 h1 {
-font-size: 50px;
-line-height: 1.3;
-width: 100%;
-padding: 30px;
-margin-top: 200px;
-text-align: center;
-color: white;
+  font-size: 50px;
+  line-height: 1.3;
+  width: 100%;
+  padding-top: 30px;
+  margin-top: 10rem;
+  text-align: center;
+  color: white;
 }
 
 /*🔸 country */
 
 .countries_container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
 }
 
 .countries {
-/* margin-bottom: 8rem; */
-display: flex;
-font-size: 2rem;
-opacity: 0;
-transition: opacity 1s;
+  /* margin-bottom: 8rem; */
+  display: flex;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 1s;
 }
 .country {
-background-color: #fff;
-box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
-font-size: 1.8rem;
-width: 30rem;
-border-radius: 0.7rem;
-margin: 0 3rem;
-/* overflow: hidden; */
+  background-color: #36454F;
+  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  width: 30rem;
+  border-radius: 0.7rem;
+  margin: 0 3rem;
+  /* overflow: hidden; */
 }
 .country__img {
-width: 30rem;
-height: 17rem;
-object-fit: cover;
-background-color: #eee;
-border-top-left-radius: 0.7rem;
-border-top-right-radius: 0.7rem;
+  width: 30rem;
+  height: 17rem;
+  object-fit: cover;
+  background-color: #eee;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
 }
 .country__data {
-padding: 2.5rem 3.75rem 3rem 3.75rem;
+  padding: 2.5rem 3.75rem 3rem 3.75rem;
 }
 .country__name {
-font-size: 2.7rem;
-margin-bottom: 0.7rem;
+  color: #eee;
+  font-size: 2.7rem;
+  margin-bottom: 0.7rem;
 }
 .country__region {
-font-size: 1.4rem;
-margin-bottom: 2.5rem;
-text-transform: uppercase;
-color: #888;
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  color: #C2C2C2;
 }
+.country__row {
+    color: #eee;
+  }
 .country__row:not(:last-child) {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .country__row span {
-display: inline-block;
-margin-right: 2rem;
-font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: 2.4rem;
 }
 .btn_country {
-min-width: 130px;
-height: 40px;
-color: #fff;
-padding: 5px 10px;
-font-weight: bold;
-cursor: pointer;
-transition: all 0.3s ease;
-position: relative;
-display: inline-block;
-outline: none;
-border-radius: 5px;
-border: 2px solid white;
-background: #10ba10;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid white;
+  background: #E66082;
 }
 .btn_country:hover {
-background: #fff;
-color: #10ba10
+  background: #fff;
+  color: #E66082;
 }
 .input_country {
-padding: 10px;
-font-size: 1.6rem;
+  padding: 10px;
+  font-size: 1.6rem;
+  margin: 1.5rem;
+  border-radius: 10px;
 }
 
 /*🔸 neighbour country */
 
 .neighbour::before {
-content: 'Neighbour country';
-width: 100%;
-position: absolute;
-top: -4rem;
+  content: "Neighbour country";
+  width: 100%;
+  position: absolute;
+  top: -4rem;
 
-text-align: center;
-font-size: 1.8rem;
-font-weight: 600;
-text-transform: uppercase;
-color: white;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
 }
 .neighbour {
-transform: scale(0.9) translateY(1rem);
-margin-left: 0;
+  transform: scale(0.9) translateY(1rem);
+  margin-left: 0;
 }
